@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolFin Residential Rooftop Loans & Sales Contest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;1,500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #000;
+            line-height: 1.6;
+            background-color: white;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background: white;
+        }
+        .header-image {
+            width: 96%;
+            max-width: 580px;
+            height: auto;
+            margin: 10px auto;
+            position: relative;
+            background: linear-gradient(179deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.70) 100%);
+        }
+        .header-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+        .logo-container {
+            position: absolute;
+            top: 23px;
+            left: 22px;
+            padding: 5px;
+            background: rgba(255, 255, 255, 0.46);
+            border-radius: 4px;
+            backdrop-filter: blur(7.55px);
+        }
+        .logo {
+            width: 69px;
+            height: 23px;
+        }
+        .header-title {
+            position: absolute;
+            bottom: 46px;
+            left: 39px;
+            max-width: 444px;
+            width: 80%;
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 36.4px;
+        }
+        .content {
+            padding: 0 5%;
+            width: 100%;
+        }
+        .greeting {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 528px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+        .green-text {
+            color: #058D1C;
+            font-weight: 700;
+        }
+        .divider {
+            width: 90%;
+            max-width: 34rem;
+            height: 3px;
+            background-color: #F1F1F1;
+            margin: 20px auto;
+        }
+        .features-section {
+            background-color: #F1FFF3;
+            padding: 22px 24px;
+            margin: 24px auto;
+            width: 90%;
+            max-width: 523px;
+        }
+        .features-title {
+            color: #058D1C;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 23.4px;
+            margin-bottom: 8px;
+        }
+        .features-subtitle {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 16.9px;
+            margin-bottom: 13px;
+        }
+        .feature-category {
+            color: #058D1C;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20.8px;
+            margin-bottom: 4px;
+        }
+        /* .feature-list {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 16.9px;
+            margin-bottom: 8px;
+        }
+        .feature-list strong {
+            font-weight: 700;
+            display: block;
+        }
+        .feature-list i {
+            font-style: italic;
+        } */
+        .rewards-section {
+            width: 90%;
+            max-width: 466px;
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .rewards-title {
+            color: #058D1C;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 23.4px;
+            text-align: center;
+            width: 100%;
+            max-width: 412px;
+            margin-bottom: 10px;
+        }
+        .rewards-subtitle {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 16.9px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .rewards-graphic {
+            width: 100%;
+            max-width: 417px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+        .rewards-graphic-text {
+            color: #058D1C;
+            font-family: 'DM Serif Display', serif;
+            font-size: 23.77px;
+            font-weight: 400;
+            line-height: 30.91px;
+            text-align: center;
+            width: 100%;
+            max-width: 317px;
+        }
+        .achievement-rewards {
+            width: 90%;
+            max-width: 560px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .achievement-title {
+            color: #058D1C;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 23.4px;
+            margin-bottom: 20px;
+        }
+        .width-110 {
+            width: 110%;
+        }
+        .achievement-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .achievement-item {
+            text-align: center;
+            position: relative;
+            margin-bottom: 30px;
+            flex: 0 0 30%;
+            min-width: 120px;
+        }
+        .achievement-item img {
+            width: 100%;
+            max-width: 129px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .achievement-badge {
+            width: 90%;
+            max-width: 142px;
+            height: 36px;
+            background-color: #FFC107;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .achievement-text {
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 13px;
+        }
+        .regular-rewards {
+            text-align: center;
+            margin: auto;
+            margin-top: -4rem;
+        }
+        .regular-title {
+            color: #058D1C;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 23.4px;
+            margin-bottom: 16px;
+        }
+        .amazon-card {
+            margin-top: -1.6rem;
+        }
+        .amazon-logo {
+            width: 14rem;
+        }
+        .amazon-text {
+            position: absolute;
+            top: 38px;
+            left: 104px;
+            font-size: 9.6px;
+            font-weight: 700;
+            opacity: 0.8;
+        }
+        .amazon-amount {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 18.85px;
+            font-weight: 700;
+        }
+        .amazon-badge {
+            width: 142px;
+            height: 36px;
+            background-color: #FFC107;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .amazon-badge-text {
+            font-size: 8px;
+            font-weight: 700;
+            line-height: 10.4px;
+        }
+        .cta-button {
+            z-index: 9999;
+            position: relative;
+            width: 90%;
+            max-width: 396px;
+            padding: 10px;
+            background-color: #FFC107;
+            outline: 6px solid white;
+            margin: 2.4rem auto -3.2rem auto;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 23.4px;
+        }
+        .green-footer {
+            max-width: 34rem;
+            margin: auto;
+            margin-top: 1.6rem;
+            height: 134px;
+            background-color: #058D1C;
+            position: relative;
+        }
+        .enroll-button {
+            margin-top: 0.8rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 13px;
+            border-radius: 11px;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 27.47px;
+            text-align: center;
+            width: 173px;
+            text-decoration: none;
+            color: #000;
+            display: block;
+        }
+        .enroll-button:hover {
+            background-color: #000;
+            color: #fff;
+        }
+        .footer-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20.8px;
+        }
+        .footer-note {
+            text-align: center;
+            font-size: 12px;
+            font-style: italic;
+            font-weight: 500;
+            line-height: 15.6px;
+            color: #777777;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Improved Responsive styles */
+        @media (max-width: 600px) {
+            .header-image {
+                width: 100%;
+                margin: 0;
+            }
+            
+            .header-title {
+                font-size: 22px;
+                line-height: 28px;
+                bottom: 20px;
+                left: 20px;
+            }
+            
+            .greeting {
+                font-size: 14px;
+                line-height: 20px;
+                padding: 0 10px;
+            }
+            
+            .features-section {
+                width: 95%;
+                padding: 15px;
+            }
+            
+            .features-title,
+            .rewards-title,
+            .achievement-title,
+            .regular-title {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            
+            .features-subtitle,
+            .rewards-subtitle {
+                font-size: 12px;
+                line-height: 16px;
+                width: 80%;
+            }
+            
+            .feature-list {
+                font-size: 12px;
+                line-height: 16px;
+            }
+            
+            .rewards-graphic-text {
+                font-size: 20px;
+                line-height: 26px;
+            }
+            
+            .achievement-items {
+                justify-content: center;
+            }
+            
+            .achievement-item {
+                flex: 0 0 45%;
+                margin: 0 5px 20px;
+            }
+            
+            .cta-button {
+                font-size: 16px;
+                line-height: 20px;
+                width: 70%;
+            }
+            .amazon-logo {
+                width: 100%;
+            }
+            
+            .enroll-button {
+                width: 150px;
+                font-size: 18px;
+                line-height: 24px;
+            }
+            
+            .footer-text {
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .header-title {
+                font-size: 18px;
+                line-height: 24px;
+                bottom: 15px;
+                left: 15px;
+                width: 90%;
+            }
+            
+            .logo-container {
+                top: 10px;
+                left: 10px;
+            }
+            
+            .achievement-items {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .achievement-item {
+                flex: 0 0 90%;
+                margin-bottom: 25px;
+            }
+            
+            .amazon-card {
+                transform: scale(0.9);
+            }
+            
+            .green-footer {
+                height: 100px;
+            }
+            
+            .enroll-button {
+                width: 140px;
+                font-size: 16px;
+                padding: 10px;
+            }
+        }
+                .feature-list {
+                  list-style: none;
+                  padding: 0;
+                  margin: 0;
+                  font-family: Arial, sans-serif;
+                }
+              
+                .feature-list > li {
+                  margin-bottom: 1rem;
+                  font-size: 1.1rem;
+                }
+              
+                .feature-list ul {
+                  list-style: disc;
+                  padding-left: 1.5rem;
+                  margin-top: 0.5rem;
+                }
+              
+                .feature-list li ul li {
+                  font-weight: normal;
+                  font-size: 1rem;
+                  margin-bottom: 0.4rem;
+                }
+              
+                @media (max-width: 768px) {
+                  .feature-list > li {
+                    font-size: 1rem;
+                  }
+              
+                  .feature-list li ul li {
+                    font-size: 0.95rem;
+                  }
+                }
+              
+                @media (max-width: 480px) {
+                  .feature-list > li {
+                    font-size: 0.95rem;
+                  }
+              
+                  .feature-list li ul li {
+                    font-size: 0.9rem;
+                  }
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Image Section -->
+        <div class="header-image">
+            <img src="/banner-email.png" alt="Beautiful house with solar panels">
+            <div class="logo-container">
+                <img src="/solfin-logo-email.png" alt="SolFin Logo" class="logo">
+            </div>
+            <div class="header-title">
+                Introducing Best in Class Residential Rooftop Loans & Exclusive Sales Contest!
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <div class="greeting">
+                <p>Dear EPC Partner,</p><br>
+                <p>Get ready to power up your business and rewards with <span class="green-text">Solfin</span>, a dynamic NBFC backed by Waaree! We're thrilled to present our <span class="green-text">"Best In Class"</span> Residential Rooftop Loan product, specifically designed to provide your customers with unparalleled financing solutions.</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Features Section -->
+        <div class="features-section">
+            <div class="features-title">Unlock a Brighter Future for Your Customers !</div>
+            <div class="features-subtitle">Offer your clients the most competitive financing options available</div>
+            
+            <div class="feature-category">Incredible Financing Features</div>
+              
+              <ul class="feature-list">
+                <li>
+                  <strong>ZERO Cost Benefits:</strong>
+                  <ul>
+                    <li>No Processing Fee</li>
+                    <li>Zero Prepayment Charges</li>
+                  </ul>
+                </li>
+              
+                <li>
+                  <strong>Unmatched Terms:</strong>
+                  <ul>
+                    <li>Flat 7.9% Interest Rate</li>
+                    <li>
+                      20% Interest Cashback* 
+                      <i>(paid at the end of loan tenure if all EMIs are paid on time)</i>
+                    </li>
+                    <li>100% Loan-to-Value (LTV)</li>
+                    <li>Up to 5 Years Tenure</li>
+                    <li>2 Months Principal Moratorium</li>
+                  </ul>
+                </li>
+              
+                <li>
+                  <strong>Quick & Easy Process:</strong>
+                  <ul>
+                    <li>Minimal Documentation</li>
+                    <li>5-Minute Loan Processing</li>
+                    <li>Instant Approvals</li>
+                  </ul>
+                </li>
+              </ul>
+              
+        </div>
+
+        <!-- Rewards Program Section -->
+        <div class="rewards-section">
+            <div class="rewards-title">Ignite Your Earnings with the Exclusive EPC Rewards Program!</div>
+            <div class="rewards-subtitle">We're launching an exciting 90-Day Contest* exclusively for Waaree Dealers to recognize and reward your valuable contributions</div>
+            
+            <div class="rewards-graphic">
+                    <img src="/epc-reward.png" alt="Electric Scooter">
+                </div>
+            </div>
+        </div>
+
+        <!-- Achievement Rewards -->
+        <div class="achievement-rewards">
+            <div class="achievement-title">Achievement Rewards</div>
+            
+            <div class="achievement-items">
+                
+                <div class="rewards-graphic">
+                    <img class="width-110" src="/referrals-reward.png" alt="Electric Scooter">
+                </div>
+            </div>
+        </div>
+
+        <!-- Regular Rewards -->
+        <div class="regular-rewards">
+            <div class="regular-title">Regular Rewards</div>
+            <div class="amazon-card">
+                <img src="/amazon-gift-card.png" alt="Amazon Logo" class="amazon-logo">
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-button">
+            Become a Solfin EPC Partner and Start Winning Today
+        </div>
+
+        <!-- Green Footer -->
+        <div class="green-footer">
+            <a href="https://solfin.co.in/epc-onboarding" class="enroll-button">Enroll Now!</a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-text">
+            We look forward to a prosperous partnership!<br>
+            Sincerely,<br>
+            The Solfin Team
+        </div>
+        <div class="divider"></div>
+        <div class="footer-note">
+            *Valid for Loans disbursed from April 8th to July 15th, 2025
+        </div>
+    </div>
+</body>
+</html>
